@@ -5,13 +5,19 @@
       (slideChange)="onSlideChange()"
       [navigation]="true"
       [pagination]="{ clickable: true }"
-      [scrollbar]="{ draggable: true }"
       class="main-slider"
     >
-      <ng-template swiperSlide>Slide 1</ng-template>
-      <ng-template swiperSlide>Slide 2</ng-template>
-      <ng-template swiperSlide>Slide 3</ng-template>
-      <ng-template swiperSlide>Slide 4</ng-template>
-      <ng-template swiperSlide>Slide 5</ng-template>
-      <ng-template swiperSlide>Slide 6</ng-template>
+      <ng-template swiperSlide>
+      	<div class="image-container">
+			   <div class="image"></div>
+      	</div>     	
+      	<div class="text-container">
+      		<h1 class="main">Frontend</h1>
+      		<h1>Designer/Developer</h1>
+      		<div class="contact" id="button-6">
+      			<div class="overlay"><div class="highlight"></div></div>
+      			<span class="text">Contact Me</span>
+      		</div>
+      	</div>
+      </ng-template>
     </swiper>

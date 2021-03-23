@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import SwiperCore, {
   Navigation,
   Pagination,
-  Scrollbar,
   A11y,
 } from 'swiper/core';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Navigation, Pagination, A11y]);
 
 @Component({
   selector: 'app-banner-slider',
