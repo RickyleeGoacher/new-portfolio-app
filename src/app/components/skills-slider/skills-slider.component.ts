@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import SwiperCore, {
   Navigation,
-  Pagination,
   A11y,
 } from 'swiper/core';
 
-SwiperCore.use([Navigation, Pagination, A11y]);
+SwiperCore.use([Navigation, A11y]);
 
 @Component({
   selector: 'app-skills-slider',
