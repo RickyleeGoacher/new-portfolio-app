@@ -1,38 +1,133 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+	margin: 0;
+}
+
 ul {
 	padding: 0;
 	margin: 0;
 }
 
 .main-slider .swiper-wrapper .swiper-slide {
-  background: #f1f1f1;
-  color: #000;
-  text-align: center;
-  line-height: 300px;
-  min-height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  	background: #f1f1f1;
+  	color: #000;
+  	text-align: center;
+  	min-height: 77vh;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	flex-direction: column;
+  	position: relative;
+  	.image-container {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: black;
+		.image {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			min-height: 77vh;
+			height: auto;
+			opacity: 0.6;
+			background-image: url("/assets/images/forest-5889923_1280.png");
+			background-attachment: fixed;
+  			background-position: center;
+  			background-repeat: no-repeat;
+  			background-size: cover;
+		}
+	}
+	.text-container {
+		width: 100%;
+		min-height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		h1 {
+			font-size: 3rem;
+			font-family: 'Montserrat', sans-serif;
+			margin-top: 0.5rem;
+			color: white;
+		}
+		.main {
+			margin: 0;
+		}
+		.contact {
+			cursor: pointer;
+			width: 200px;
+			position: relative;
+			min-height: 50px;
+			border: solid 2px white;
+			border-radius: 2px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: 'Open Sans', sans-serif;
+			color: white;
+			span {
+ 				z-index: 1;
+			}
+			.overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				opacity: 0.5;
+			}
+			.overlay .highlight {
+				position: absolute;
+				top: 0;
+				width: 0%;
+				min-height: 100%;
+				background-color: #b61313;
+				opacity: 0.9;
+				transition-duration: 0.5s;
+			}
+			&:hover {
+				.highlight {
+					width: 100%;
+				}
+			}
+		}
+	}
 }
 
 .skills-slider .swiper-wrapper .swiper-slide {
-  color: #000;
-  text-align: center;
-  min-height: 200px;
-  max-height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.skills-slider .swiper-wrapper .swiper-slide i {
-	font-size: 4rem;
-	transition-duration: 0.3s;
-	color: #999595;
-	padding: 2rem;
-}
-
-.skills-slider .swiper-wrapper .swiper-slide i:hover {
-	font-size: 5rem;
-	color: #b61313;
+  	color: #000;
+  	text-align: center;
+  	min-height: 170px;
+  	max-height: 170px;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	i {
+		font-size: 4.5rem;
+		transition-duration: 0.3s;
+		color: #999595;
+		padding: 2rem;
+	}
+	span {
+		font-size: 0;
+		opacity: 0;
+		transition-duration: 0.5s;
+		font-family: 'Open Sans', sans-serif;
+		color: #2d837f;
+	}
+	&:hover {
+		i {
+			font-size: 5rem;
+			color: #b61313;
+		}
+		span {
+			font-size: 130%;
+			opacity: 1;
+		}
+	}
 }
