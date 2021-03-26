@@ -31,8 +31,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less",
-              "./node_modules/swiper/css/swiper.css"
+              "src/styles.less"
             ],
             "scripts": []
           },
