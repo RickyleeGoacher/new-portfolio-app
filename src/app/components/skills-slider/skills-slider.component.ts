@@ -43,6 +43,7 @@ export class SkillsSliderComponent implements OnInit {
       disableOnInteraction: true
     },
     loop: true,
+    speed: 9000,
     slideToClickedSlide: true 
   };
 
