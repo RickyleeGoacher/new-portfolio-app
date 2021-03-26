@@ -9,6 +9,11 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  scrollToSection(id: string) {
+    const el = document.querySelector(`#${id}`) as HTMLElement;
+    el.scrollIntoView();
+  }
+
   ngOnInit(): void {
   	let prevOffset = window.pageYOffset;
   	window.addEventListener('scroll', function() {

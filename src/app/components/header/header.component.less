@@ -42,6 +42,7 @@ nav {
 			margin-right: 0.5rem;
 			font-family: 'Open Sans', sans-serif;
 			transition-duration: 0.5s;
+			cursor: pointer;
 			a {
 				text-decoration: none;
 				color: white;
@@ -54,4 +55,33 @@ nav {
 }
 .hide {
 	top: -70px;
+}
+
+@media screen and (max-width: 1024px) {
+	nav {
+		.logo-section {
+			margin-left: 0;
+			margin-right: 0;
+			span {
+				font-size: 1.5rem;
+				&::before {
+					content: '| ';
+				}
+				&::after {
+					content: ' |';
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 350px) {
+	nav {
+		.logo-section {
+			min-width: unset;
+			span {
+				font-size: 1rem;
+			}
+		}
+	}
 }
