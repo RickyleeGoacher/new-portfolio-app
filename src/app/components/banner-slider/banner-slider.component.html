@@ -3,8 +3,6 @@
       [spaceBetween]="50"
       (swiper)="onSwiper($event)"
       (slideChange)="onSlideChange()"
-      [navigation]="true"
-      [pagination]="{ clickable: true }"
       class="main-slider"
     >
       <ng-template swiperSlide>
@@ -13,10 +11,10 @@
       	</div>     	
       	<div class="text-container">
       		<h1 class="main">Frontend</h1>
-      		<h1>Designer/Developer</h1>
-      		<div class="contact" id="button-6">
+      		<h1>Developer/Designer</h1>
+      		<div class="contact" id="button-6" (click)="scrollToSection()">
       			<div class="overlay"><div class="highlight"></div></div>
-      			<span class="text">Contact Me</span>
+      			<span class="text">Featured Project  <i class="fas fa-chevron-down"></i></span>
       		</div>
       	</div>
       </ng-template>

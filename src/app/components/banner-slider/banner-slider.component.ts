@@ -18,6 +18,11 @@ export class BannerSliderComponent implements OnInit {
 
   }
 
+  scrollToSection() {
+    const el = document.querySelector('#projects') as HTMLElement;
+    el.scrollIntoView();
+  }
+
   onSwiper(swiper: any) {
     console.log(swiper);
   }
