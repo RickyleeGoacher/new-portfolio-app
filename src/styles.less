@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	margin: 0;
 }
@@ -71,6 +75,9 @@ ul {
 			color: white;
 			span {
  				z-index: 1;
+ 				i {
+ 					font-size: 90%;
+ 				}
 			}
 			.overlay {
 				position: absolute;
@@ -129,5 +136,17 @@ ul {
 			font-size: 130%;
 			opacity: 1;
 		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.main-slider .swiper-wrapper .swiper-slide .text-container h1 {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.main-slider .swiper-wrapper .swiper-slide .text-container h1 {
+		font-size: 1.5rem;
 	}
 }
