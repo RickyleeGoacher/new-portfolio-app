@@ -35,6 +35,9 @@ export class BannerSliderComponent implements OnInit {
     window.addEventListener('scroll', function()  {
       let scrolled  = window.pageYOffset;
       let speed = 2;
+
+      if(window.screen.width < 600) speed = 5;
+      
       const parallax = document.querySelector('#image') as HTMLElement;;
       var coords = '-' + (scrolled / speed) + "px";
       parallax.style.backgroundPosition = `center ${ coords }`;
