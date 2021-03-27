@@ -28,10 +28,10 @@ export class SkillsSliderComponent implements OnInit {
         slidesPerView: 3
       },
       400: {
-        slidesPerView: 2
+        slidesPerView: 1
       },
       300: {
-        slidesPerView: 2
+        slidesPerView: 1
       }
     },
     navigation: {

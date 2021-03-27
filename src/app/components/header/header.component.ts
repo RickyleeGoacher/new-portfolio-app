@@ -16,6 +16,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   	let prevOffset = window.pageYOffset;
+    if(window.screen.width < 500) {
+      prevOffset = window.screen.height;
+    }
   	window.addEventListener('scroll', function() {
   		const navElement = document.querySelector('#nav') as HTMLElement;
   		if(window.pageYOffset > prevOffset) {
@@ -23,7 +26,7 @@ export class HeaderComponent implements OnInit {
   		} else {
   			navElement.classList.remove('hide');
   		}
-  		prevOffset = window.pageYOffset;
+  		(window.screen.width < 500) ? prevOffset = window.screen.height : prevOffset = window.pageYOffset;
   	});
   }
 
