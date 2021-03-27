@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import SwiperCore, {
-  Navigation,
-  Pagination,
-  A11y,
-} from 'swiper/core';
-
-SwiperCore.use([Navigation, Pagination, A11y]);
+import { SwiperOptions } from 'swiper';
+import Swiper, { Autoplay} from 'swiper';
+Swiper.use([Autoplay]);
 
 @Component({
   selector: 'app-banner-slider',
@@ -17,6 +13,11 @@ export class BannerSliderComponent implements OnInit {
   constructor() { 
 
   }
+
+  config: SwiperOptions = {
+    parallax: true,
+    autoHeight: true,
+  };
 
   scrollToSection() {
     const el = document.querySelector('#projects') as HTMLElement;

@@ -1,10 +1,4 @@
-    <swiper
-      [slidesPerView]="1"
-      [spaceBetween]="50"
-      (swiper)="onSwiper($event)"
-      (slideChange)="onSlideChange()"
-      class="main-slider"
-    >
+    <swiper [config]="config" class="main-slider">
       <ng-template swiperSlide>
       	<div class="image-container">
 			   <div class="image"></div>
