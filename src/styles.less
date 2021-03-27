@@ -34,12 +34,13 @@ ul {
 			width: 100%;
 			min-height: 77vh;
 			height: auto;
-			opacity: 0.6;
+			opacity: 0.9;
 			background-image: url("/assets/images/forest-5889923_1280.png");
 			background-attachment: fixed;
   			background-position: center;
   			background-repeat: no-repeat;
   			background-size: cover;
+  			z-index: 0;
 		}
 	}
 	.text-container {
@@ -142,6 +143,20 @@ ul {
 @media screen and (max-width: 500px) {
 	.main-slider .swiper-wrapper .swiper-slide .text-container h1 {
 		font-size: 2rem;
+	}
+
+	.skills-slider .swiper-wrapper .swiper-slide-active {
+		transition-duration: 0.5s;
+		i {
+			font-size: 5rem;
+			color: #b61313;
+			transition-duration: 0.7s;
+		}
+		span {
+			font-size: 130%;
+			opacity: 1;
+			transition-duration: 0.7s;
+		}
 	}
 }
 
