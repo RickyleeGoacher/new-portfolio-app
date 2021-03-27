@@ -32,6 +32,13 @@ export class BannerSliderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    window.addEventListener('scroll', function()  {
+      let scrolled  = window.pageYOffset;
+      let speed = 2;
+      const parallax = document.querySelector('#image') as HTMLElement;;
+      var coords = '-' + (scrolled / speed) + "px";
+      parallax.style.backgroundPosition = `center ${ coords }`;
+    });
   }
 
 }
